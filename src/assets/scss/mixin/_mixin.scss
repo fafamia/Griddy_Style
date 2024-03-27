@@ -1,0 +1,18 @@
+@mixin T() {
+    @media all and (min-width: $T) {
+      //Tablet 768px;
+      @content;
+    }
+  }
+
+  @mixin text() {
+    font-size: 15px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    line-height: 1.5rem;
+  
+    @include T() {
+      font-size: 16px;
+    }
+  }

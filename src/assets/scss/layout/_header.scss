@@ -1,0 +1,22 @@
+.header-body{
+    background-color: #fff;
+    height: 92px;
+    position: relative;
+    h1{
+        float: left;
+        a{
+            background-image: url(/src/assets/img/LOGO.png);
+            background-repeat: no-repeat;
+            width: 150px;
+            height: 100px;
+            display: block;
+            text-indent: 101%; 
+            overflow: hidden;  
+            white-space: nowrap; 
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

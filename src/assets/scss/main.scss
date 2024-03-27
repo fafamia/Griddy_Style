@@ -1,0 +1,11 @@
+//base 
+@import "base/reset";
+@import "base/var";
+@import "base/base";
+@import "mixin/mixin";
+
+//layout
+@import "layout/header";
+
+//page
+@import "page/home";
