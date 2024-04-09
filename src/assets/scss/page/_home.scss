@@ -328,13 +328,14 @@
             background-color: #fff;
             box-sizing: border-box;
             padding: $M-spacing;
-            border-radius: 48px;
+            border-radius: 28px;
             display: flex;
             flex-direction: column;
             gap: 12px;
 
             @include T() {
                 padding: 40px;
+                border-radius: 48px;
             }
 
             .colors-box {
