@@ -1,7 +1,7 @@
 #style-body {
     background-color: $bgc;
     height: 100%;
-    padding: 20px 0;
+    padding: 40px 0;
 
 
     #style-play-zone {
@@ -55,8 +55,8 @@
                 justify-content: center;
 
                 @include T() {
-                    width: 240px;
-                    justify-content: start;
+                    //width: 240px;
+                    justify-content: center;
                     
 
                 }
@@ -65,11 +65,11 @@
                     //預覽區，蟲蟲圖
                     width: 100%;
                     height: 100%;
-                    width: 240px;
-                    height: 240px;
-                    outline: 1.618px solid #000;
-
-                    @include T() {}
+                    @include T(){
+                        width: 365px;
+                        height: 365px;
+                    }
+                    
                 }
             }
 
@@ -85,57 +85,64 @@
 
                 @include T() {
                     max-width: 400px;
+                    margin-bottom: 130px;
                     // background-color: salmon;
                 }
 
                 #reset {
                     width: calc(50% - 4px);
-                    background-color: #fff;
-                    border: 1px solid $orange-2;
-                    color: $orange-2;
+                    font-size: 20px;
+                    background-color: #E6E6E6;
+                    border: 1px solid #E6E6E6;
+                    color: #000;
                     padding: 2px 0;
-                    border-radius: 8px;
+                    border-radius: 10px;
+                    cursor: pointer;
 
                     &:hover {
-                        background-color: darken(#fff, 4%);
+                        background-color: darken(#E6E6E6, 4%);
                     }
                     &:active {
-                        background-color: darken(#fff, 4%);
+                        background-color: darken(#E6E6E6, 4%);
                     }
                     @include T() {
-                        padding: 6px 0;
+                        padding: 12px 0;
                     }
                 }
 
                 #random {
                     width: calc(50% - 4px);
-                    background-color: #fff;
-                    border: 1px solid $orange-2;
-                    color: $orange-2;
+                    font-size: 20px;
+                    background-color: #E6E6E6;
+                    border: 1px solid #E6E6E6;
+                    color: #000;
                     padding: 2px 0;
-                    border-radius: 8px;
+                    border-radius: 10px;
+                    cursor: pointer;
 
                     &:hover {
-                        background-color: darken(#fff, 4%);
+                        background-color: darken(#E6E6E6, 4%);
                     }
 
                     &:active {
-                        background-color: darken(#fff, 4%);
+                        background-color: darken(#E6E6E6, 4%);
                     }
                     @include T() {
-                        padding: 6px 0;
+                        padding: 12px 0;
                     }
                 }
 
                 #setphoto {
                     width: calc(100%);
+                    font-size: 20px;
                     background-color: $orange-2;
                     border: 1px solid $orange-2;
-                    color: #fff;
+                    color: #000;
                     padding: 2px 0;
-                    border-radius: 8px;
+                    border-radius: 10px;
+                    cursor: pointer;
                     @include T() {
-                        padding: 8px 0;
+                        padding: 16px 0;
                     }
 
                     &:hover {
@@ -266,40 +273,45 @@
         .tabs {
             display: flex;
             justify-content: space-between;
-            margin: 0;
-            gap: 8px;
+            margin-bottom: 20px;
+            border-radius: 28px;
+            background-color: #fff;
+            height: 82px;
+            padding: 12px;
 
             @include T() {
-                gap: 20px;
                 justify-content: center;
-                // width: calc(100% - 20px);
-                
             }
 
             button {
-                @include text;
+                font-size: 20px;
                 flex-grow: 1;
-                padding: 4px 0;
                 width: auto;
                 cursor: pointer;
-                background-color: $gray-2;
-                color: #fff;
-                border: none;
-                border-radius: 12px 12px 0 0;
+                background-color: #fff;
+                color: #3F75FF;
+                border: 1px solid #3F75FF;
+                &:first-child {
+                    border-radius: 16px 0 0 16px;
+                }
+                &:last-child {
+                    border-radius: 0 16px 16px 0;
+                }
 
                 &:hover {
                     background-color: $blue-2;
+                    color: #fff;
                 }
 
                 &:active {
                     background-color: darken($blue-2, 10%);
+                    color: #fff;
                 }
 
 
 
                 @include T() {
                     flex-grow: 1;
-                    border-radius: 16px 16px 0 0;
                     padding: 10px 0;
                 }
 
@@ -307,6 +319,7 @@
 
             .active {
                 background-color: $blue-2;
+                color: #fff;
             }
         }
 
@@ -315,7 +328,7 @@
             background-color: #fff;
             box-sizing: border-box;
             padding: $M-spacing;
-            border-radius: 0 0 28px 28px;
+            border-radius: 48px;
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -444,11 +457,14 @@
 
     #mainSvg {
         position: relative;
+        border-radius: 28px;
 
         .SVGSTAFF {
             position: absolute;
             top: 0;
             right: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 

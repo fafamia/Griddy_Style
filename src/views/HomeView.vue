@@ -19,15 +19,16 @@
 
                 </div>
                 <div class="btnbox">
+                    <button id="setphoto" @click="toggleZone" >
+                        確認送出
+                    </button>
                     <button id="reset" @click="selectRandomOption" >
                         隨機選擇
                     </button>
                     <button id="random" @click="resetOptions" >
                         重置
                     </button>
-                    <button id="setphoto" @click="toggleZone" >
-                        確認送出
-                    </button>
+                    
                 </div>
             </div>
             <!-- 選項區，含頁籤 -->
