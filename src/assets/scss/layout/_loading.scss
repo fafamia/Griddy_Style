@@ -5,13 +5,17 @@
     height: 100%;
     z-index: 999;
     .loading-area{
-        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
-        margin: 0 auto;
-        padding-top: 60px;
-        margin-top: 40px;
-        height: 600px;
-        overflow: hidden;
+        height: 100vh;
+        @include T(){
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
         .loading-img {
             display: flex;
             transform:rotate(5deg);
@@ -21,25 +25,37 @@
         }
     }
     .loading-logo{
-            width: 350px;
+            width: 200px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             animation: fly-out 2s linear 1s 1;
+            @include T() {
+                width: 350px;
+            }
     }
 }
 
 .loading-griddy{
     border: 2px solid #fff;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     animation: marquee 2s linear infinite, fadeOut 1.3s 0.7s forwards;
+    @include T(){
+        width: 150px;
+        height: 150px;
+    }
+
     img{
         width: 100%;
         height: 100%;
-        width: 146px;
-        height: 146px;
+        width: 116px;
+        height: 116px;
+        @include T(){
+            width: 146px;
+            height: 146px;
+        }
     }
 }
 

@@ -1,7 +1,7 @@
 #style-body {
     background-color: $bgc;
     height: 100%;
-    padding: 40px 0;
+    padding: 30px 0;
 
 
     #style-play-zone {
@@ -32,15 +32,11 @@
             padding: 20px;
 
             @include T() {
-                // flex-wrap: nowrap;
-                // background-color: aquamarine;  
                 align-items: start;
                 height: 100%;
                 width: auto;
                 box-sizing: border-box;
                 // flex-grow: 1;
-
-                
             }
 
             .style-view {
@@ -57,8 +53,6 @@
                 @include T() {
                     //width: 240px;
                     justify-content: center;
-                    
-
                 }
 
                 .viewimagebox {
@@ -85,7 +79,7 @@
 
                 @include T() {
                     max-width: 400px;
-                    margin-bottom: 130px;
+                    margin-bottom: 10px;
                     // background-color: salmon;
                 }
 
@@ -164,11 +158,10 @@
     #show-zone {
         // 送出後的頁面，v-show
         width: calc(100% - 40px);
-        height: 800px;
         background-color: #fff;
         margin: auto;
         border-radius: 28px;
-        padding: 20px 0;
+        padding: 20px 0 30px 0;
 
         .final-show {
             display: flex;
@@ -206,7 +199,7 @@
                 
                 #download {
                     width: calc(50% - 4px);
-                    padding: 2px 0;
+                    padding: 6px 0;
                     border-radius: 8px;
                     background-color: $orange-2;
                     border: 1px solid $orange-2;
@@ -220,13 +213,10 @@
                     &:active {
                         background-color: darken($orange-2, 4%);
                     }
-                    @include T() {
-                        padding: 6px 0;
-                    }
                 }
                 #goback {
                     width: calc(50% - 4px);
-                    padding: 2px 0;
+                    padding: 6px 0;
                     border-radius: 8px;
                     background-color: $white-2;
                     border: 1px solid #999;
@@ -239,9 +229,6 @@
                     }
                     &:active {
                         background-color: darken($white-2, 4%);
-                    }
-                    @include T() {
-                        padding: 6px 0;
                     }
                 }
             }
