@@ -78,7 +78,6 @@
                 <span>最棒的Griddy粉墨登場！</span>
                 <!-- <img v-if="griddyImage" :src="griddyImage" alt="Captured Griddy Content"> -->
                 <div class="finalbtnbox">
-                    <button id="setPicture" @click="setProfilePicture" >設為大頭貼</button>
                     <button id="goback" @click="toggleZone" >回上頁</button>
                     <button id="download" @click="griddyToImage" >下載圖片</button>
                 </div>
@@ -104,7 +103,6 @@ import { accessoriesStaffs } from "@/policy/color.js";
 import { unifiedColors } from "@/policy/color.js"
 import html2canvas from 'html2canvas';
 import SetMemPic from '../components/SetMemPic.vue'; // 燈箱組件
-//import userStore from '@/stores/user'
 
 export default {
     components: {
@@ -143,7 +141,6 @@ export default {
             selectedBackgroundColor: unifiedColors[18],
             currentZone: 'style-play-zone',
             griddyImage: null, // 存储转换后的图像
-            //userStoreData: userStore(),
         };
     },
     methods: {
@@ -224,47 +221,6 @@ export default {
             });
 
         },
-        // 這個函數用來上傳圖片到網站上
-        // uploadProfilePic(formData) {
-        //     // 使用fetch發送請求到指定的網址，並上傳一些資料
-        //     fetch(`${import.meta.env.VITE_API_URL}/uploadProfilePic.php`, {
-        //         method: 'POST', // 表示這是一個"POST"請求，用來上傳資料
-        //         body: formData, // 把準備好的圖片資料發送出去
-        //     })
-        //         .then(response => {
-        //             // .then()是用來處理伺服器回應的。當伺服器回應後，這裡的代碼就會執行。
-
-        //             if (!response.ok) {
-        //                 // response.ok是一個布林值，如果伺服器回應的狀態碼是200-299之間，它就是true，表示"一切OK"
-        //                 throw new Error('網絡響應非OK'); // 如果不是OK，就報錯
-        //             }
-        //             return response.json(); // 如果一切OK，就把伺服器回應的內容轉換成JavaScript對象，方便我們使用
-        //         })
-        //         .then(data => {
-        //             if (!data.error) {
-        //                 console.log('上传成功:', data.msg);
-
-        //                 // 从localStorage获取当前用户数据
-        //                 let userDataStr = localStorage.getItem('userDataStr');
-        //                 let userData = JSON.parse(userDataStr);
-
-        //                 // 更新userData中的mem_profile为后端返回的新大头贴路径
-        //                 userData.mem_profile = data.newProfilePicPath;
-
-        //                 this.userStoreData.updateUserData({ ...userData })
-
-        //                 // 将更新后的用户数据保存回localStorage
-        //                 // localStorage.setItem('userDataStr', JSON.stringify(userData));
-
-        //                 // 这里可以添加其他逻辑，比如更新页面上显示的大头贴图片等
-        //             } else {
-        //                 console.error('上传失败:', data.msg);
-        //             }
-        //         })
-        //         .catch(error => { // 如果在發送請求或處理回應的過程中出現任何錯誤
-        //             console.error('上傳錯誤:', error); // 就在控制台顯示出錯的訊息
-        //         });
-        // },
         fullImageUrl(memProfile) {
             return `${import.meta.env.VITE_API_URL}/images/mem/${memProfile}`;
         },

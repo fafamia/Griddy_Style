@@ -94,16 +94,18 @@
                     font-size: 20px;
                     background-color: #E6E6E6;
                     border: 1px solid #E6E6E6;
-                    color: #000;
+                    color: #999;
                     padding: 2px 0;
                     border-radius: 10px;
                     cursor: pointer;
 
                     &:hover {
                         background-color: darken(#E6E6E6, 4%);
+                        color: #000;
                     }
                     &:active {
                         background-color: darken(#E6E6E6, 4%);
+                        color: #000;
                     }
                     @include T() {
                         padding: 12px 0;
@@ -115,17 +117,19 @@
                     font-size: 20px;
                     background-color: #E6E6E6;
                     border: 1px solid #E6E6E6;
-                    color: #000;
+                    color: #999;
                     padding: 2px 0;
                     border-radius: 10px;
                     cursor: pointer;
 
                     &:hover {
                         background-color: darken(#E6E6E6, 4%);
+                        color: #000;
                     }
 
                     &:active {
                         background-color: darken(#E6E6E6, 4%);
+                        color: #000;
                     }
                     @include T() {
                         padding: 12px 0;
@@ -137,7 +141,7 @@
                     font-size: 20px;
                     background-color: $orange-2;
                     border: 1px solid $orange-2;
-                    color: #000;
+                    color: #fff;
                     padding: 2px 0;
                     border-radius: 10px;
                     cursor: pointer;
@@ -175,65 +179,46 @@
             #finalimagebox {
                 // 送出後的預覽圖
                 position: relative;
-                min-width: 240px;
-                min-height: 240px;
-                max-width: 240px;
-                max-height: 240px;
-                outline: 1.618px solid #000;
+                width: 300px;
+                height: 300px;
                 margin: 20px auto;
-
+                @include T(){
+                    width: 320px;
+                    height: 320px;
+                }
             }
 
             span {
                 //最棒的Griddy粉墨登場！
                 font-family: noto;
-                font-size: 20px;
+                font-size: 24px;
                 font-weight: bold;
                 letter-spacing: .05em;
             }
             .finalbtnbox{
-                width: 240px;
+                width: 300px;
                 display: flex;
                 flex-wrap: wrap;
                 gap: 8px;
-                
-        
-                #setPicture{
-                    width: calc(100%);
-                    padding: 2px 0;
-                    border-radius: 8px;
-                    background-color: $orange-2;
-                    border: 1px solid $orange-2;
-                    cursor: pointer;
-                    @include text;
-                    color: #fff;
-
-                    &:hover {
-                        background-color: darken($orange-2, 5%);
-                    }
-                    &:active {
-                        background-color: darken($orange-2, 5%);
-                    }
-                    @include T() {
-                        padding: 8px 0;
-                    }
-
+                @include T(){
+                    width: 320px;
                 }
+                
                 #download {
                     width: calc(50% - 4px);
                     padding: 2px 0;
                     border-radius: 8px;
-                    background-color: $white-2;
-                    border: 1px solid #999;
-                    color: #999;
+                    background-color: $orange-2;
+                    border: 1px solid $orange-2;
+                    color: #fff;
                     cursor: pointer;
                     @include text;
 
                     &:hover {
-                        background-color: darken($white-2, 4%);
+                        background-color: darken($orange-2, 4%);
                     }
                     &:active {
-                        background-color: darken($white-2, 4%);
+                        background-color: darken($orange-2, 4%);
                     }
                     @include T() {
                         padding: 6px 0;
